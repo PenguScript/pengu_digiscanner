@@ -160,7 +160,7 @@ local function InitiateDigiScanner()
         UpdateBars(dist)
         inScaleform = true
         if not IsNamedRendertargetRegistered('digiscanner') then
-            RegisterNamedRendertarget('digiscanner', 0)
+            RegisterNamedRendertarget('digiscanner', false)
         end
         LinkNamedRendertarget(GetWeapontypeModel(joaat('weapon_digiscanner')))
 
@@ -241,7 +241,7 @@ local function SetupDigiScanner(vector3, parameters)
         params = parameters
         targetCoords = vector3
         if parameters.blip then
-            blip = AddBlipForCoord(vector3)
+            blip = AddBlipForCoord(vector3.x, vector3.y, vector3.z)
             SetBlipSprite(blip, parameters.blip.sprite)
             SetBlipDisplay(blip, parameters.blip.display)
             if parameters.blip.scale then
