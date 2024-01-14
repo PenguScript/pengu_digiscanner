@@ -1,7 +1,7 @@
 
 local scaleform = RequestScaleformMovie("DIGISCANNER")
 local inScaleform = false
-local ped = cache.ped or PlayerPedId()
+local ped = PlayerPedId()
 local targetCoords = vector3(0,0,0)
 local params = {}
 local sfpos = {
@@ -149,7 +149,7 @@ CreateThread(function ()
 end)
 
 local function InitiateDigiScanner()
-    ped = cache.ped or PlayerPedId()
+    ped = PlayerPedId()
     if not inScaleform then
         inScaleform = true
         local data = 0
