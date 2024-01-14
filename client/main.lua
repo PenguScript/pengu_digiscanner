@@ -143,10 +143,24 @@ CreateThread(function ()
     end
 end)
 
+local function digiScannerLoop()
+    while inScaleform do
+        if GetSelectedPedWeapon(ped) == joaat('weapon_digiscanner') then
+            if IsPlayerFreeAiming(PlayerId()) then
+                local c = GetEntityCoords(ped)
+                PlaySoundFromCoord(-1, "IDLE_BEEP", c.x,c.y,c.z, 'EPSILONISM_04_SOUNDSET', true, 5.0, false)
+            end
+            Wait(wait)
+        end
+        Wait(0)
+    end
+end
+
 local function InitiateDigiScanner()
     ped = PlayerPedId()
     if not inScaleform then
         inScaleform = true
+        CreateThread(digiScannerLoop)
         local data = 0
         local playerCoords = GetEntityCoords(ped)
         local playerHeading = GetEntityHeading(ped)
@@ -168,8 +182,6 @@ local function InitiateDigiScanner()
             data = GetNamedRendertargetRenderId('digiscanner')
         end
 
-        
-
         while inScaleform do
             SetTextRenderId(data)
             DrawScaleformMovie(scaleform, sfpos.x, sfpos.y, sfpos.width, sfpos.height, 100, 100, 100, 255, 0)
@@ -178,7 +190,6 @@ local function InitiateDigiScanner()
             if IsPlayerFreeAiming(PlayerId()) then
                 playerCoords = GetEntityCoords(ped)
                 playerHeading = GetEntityHeading(ped)
-                
                 if HeadingCheck(playerCoords, playerHeading, targetCoords) then
                     SetScaleformColor(sfcolors.lightblue, sfcolors.yellow)
                 else
@@ -200,27 +211,6 @@ local function InitiateDigiScanner()
         EndScaleformMovieMethodReturn()
     end
 end
-
-CreateThread(function()
-    local sleep = 1000
-    while true do
-        if inScaleform then
-            if GetSelectedPedWeapon(ped) == joaat('weapon_digiscanner') then   
-                if IsPlayerFreeAiming(PlayerId()) then
-                    local c = GetEntityCoords(ped)
-                    PlaySoundFromCoord(-1, "IDLE_BEEP", c.x,c.y,c.z, 'EPSILONISM_04_SOUNDSET', true, 5.0, false)
-                end
-                Wait(wait)
-                sleep = 0
-            else
-                sleep = 5000
-            end
-            
-        end
-        Wait(sleep)
-
-    end
-end)
 
 local function SetupDigiScanner(vector3, parameters)
     params = {}
