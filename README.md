@@ -1,4 +1,4 @@
-Should be drag and drop, add a few more locations and have fun!
+Should be drag and drop, check the docs at https://gitbook.penguscripts.io/
 
 Discord for Support: https://discord.gg/AS7U5GK4TE
 
