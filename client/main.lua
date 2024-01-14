@@ -108,7 +108,7 @@ end
 
 local form = nil
 local function UpdateBars(dist)
-    if not scaleform then return end
+    if not scaleform or not form then return end
     
     for i=1, #sfbars do
         if dist > sfbars[i].dist then
