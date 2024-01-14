@@ -88,13 +88,9 @@ function SetupScaleform(scaleform, Buttons)
         PushScaleformMovieFunction(scaleform, Buttons[i].type)
         if Buttons[i].int then PushScaleformMovieFunctionParameterInt(Buttons[i].int) end
         if Buttons[i].keyIndex then
-            if type(Buttons[i].keyIndex) == "table" then
                 for _, v in pairs(Buttons[i].keyIndex) do
                     N_0xe83a3e3557a56640(GetControlInstructionalButton(2, v, true))
                 end
-            else
-                N_0xe83a3e3557a56640(GetControlInstructionalButton(2, v, Buttons[i].keyIndex))
-            end
         end
         if Buttons[i].name then
             BeginTextCommandScaleformString("STRING")
