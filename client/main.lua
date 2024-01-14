@@ -275,7 +275,7 @@ local function DoAPrint(args)
 end
 
 RegisterCommand('tsf', function ()
-    exports['pengu_scaleform']:SetupDigiScanner(vector3(331.2, -1490.94, 29.27), {
+    exports['pengu_digiscanner']:SetupDigiScanner(vector3(331.2, -1490.94, 29.27), {
         event = DoAPrint,
         isAction = true,
         args = {['bin'] = 'lol'},
