@@ -77,9 +77,8 @@ local function TriggerEvents()
 end
 
 
-function SetupScaleform(scaleform, Buttons)
-    
-    local scaleform = RequestScaleformMovie(scaleform)
+local function SetupScaleform(scaleformRequest, Buttons)
+    scaleform = RequestScaleformMovie(scaleformRequest)
     while not HasScaleformMovieLoaded(scaleform) do
         Wait(0)
     end
@@ -130,9 +129,9 @@ local function UpdateBars(dist)
     end
 end
 
-local function HeadingCheck(playerCoords, playerHeading, targetCoords)
-    local x = targetCoords.x - playerCoords.x
-    local y = targetCoords.y - playerCoords.y
+local function HeadingCheck(playerCoords, playerHeading, targetCoordsToCheck)
+    local x = targetCoordsToCheck.x - playerCoords.x
+    local y = targetCoordsToCheck.y - playerCoords.y
 
     local targetHeading = GetHeadingFromVector_2d(x, y)
     return math.abs(playerHeading - targetHeading) < 20
