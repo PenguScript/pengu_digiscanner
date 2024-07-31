@@ -5,3 +5,7 @@ Should be drag and drop, check the docs at [https://gitbook.penguscripts.io/](ht
 Discord for Support: https://discord.gg/AS7U5GK4TE
 
 Preview: https://youtu.be/b5oK1LGgxoQ 
+
+
+## Cool Creations
+* [Leashed LLC Animal Control](https://forum.cfx.re/t/paid-leashed-llc-animal-control/5242164) by DeeRock
