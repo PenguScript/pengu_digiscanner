@@ -1,4 +1,4 @@
-If you use this in a release of your own, you don't need to give credit, but I'd like you to 😄
+If you use this in a release of your own, use the correct licensing and preferably give credit where its due <3
 
 Should be drag and drop, check the docs at [https://gitbook.penguscripts.io/](https://penguscripts.gitbook.io/documentation/pengu_digiscanner/exports)
 
