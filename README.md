@@ -8,4 +8,4 @@ Preview: https://youtu.be/b5oK1LGgxoQ
 
 
 ## Cool Creations
-* [Leashed LLC Animal Control](https://forum.cfx.re/t/paid-leashed-llc-animal-control/5242164) by DeeRock
+* [Leashed LLC Animal Control](https://forum.cfx.re/t/paid-leashed-llc-animal-control/5242164) by @DeeRock94
