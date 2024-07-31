@@ -125,6 +125,7 @@ local function UpdateBars(dist)
         Flashing(true)
         if IsControlJustPressed(0, params.interact.interactKey) then
             TriggerEvents()
+            inScaleform = false
         end
         DrawScaleformMovieFullscreen(form, 255, 255, 255, 255, 0)
     end
@@ -192,6 +193,7 @@ local function InitiateDigiScanner()
             end
 
             if inScaleform == false then
+                EndScaleformMovieMethodReturn()
                 break
             end
             Wait(1)
